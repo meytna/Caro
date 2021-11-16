@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { BackHandler, Text, View, TouchableOpacity } from "react-native";
 import { styles } from "../style/styles";
 
-const SelectTypeGame = (props) => {
+const SelectTypeGameScreen = (props) => {
   const { history } = props;
 
   const backAction = () => {
@@ -17,20 +17,27 @@ const SelectTypeGame = (props) => {
 
   return <View style={styles.mainBackground}>
     <TouchableOpacity
-      onPress={() => history.push("/board")}
+      onPress={() => history.push("/game")}
       style={styles.button}
       activeOpacity={0.8}
     >
       <Text style={styles.buttonTitle}>PvC</Text>
     </TouchableOpacity>
     <TouchableOpacity
-      onPress={() => history.push("/board")}
+      onPress={() => history.push("/game")}
       style={styles.button}
       activeOpacity={0.8}
     >
       <Text style={styles.buttonTitle}>PvP</Text>
     </TouchableOpacity>
+    <TouchableOpacity
+      onPress={() => history.goBack()}
+      style={styles.button}
+      activeOpacity={0.8}
+    >
+      <Text style={styles.buttonTitle}>Back</Text>
+    </TouchableOpacity>
   </View>
 }
 
-export default SelectTypeGame;
+export default SelectTypeGameScreen;

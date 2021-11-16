@@ -5,7 +5,7 @@ import { withTranslation } from "react-i18next";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 
-const MainMenu = (props) => {
+const MainMenuScreen = (props) => {
   const { history, t } = props;
   // console.log("props", props);
 
@@ -34,4 +34,4 @@ const MainMenu = (props) => {
   </View>
 }
 
-export default withTranslation()(MainMenu);
+export default withTranslation()(MainMenuScreen);

@@ -11,7 +11,7 @@ const localStyle = StyleSheet.create({
   }
 })
 
-const GetStarted = () => {
+const GetStartedScreen = () => {
   return <Link to="/menu">
     <View style={styles.mainBackground}>
       <Text style={localStyle.mainText}>
@@ -21,4 +21,4 @@ const GetStarted = () => {
   </Link>
 }
 
-export default GetStarted
+export default GetStartedScreen;

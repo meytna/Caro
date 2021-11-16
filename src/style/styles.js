@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { CELL_LENGTH } from "../config/const";
 
 export const styles = StyleSheet.create({
   mainBackground: {
@@ -23,5 +24,18 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "900",
     textTransform: "uppercase",
+  },
+  board: {
+    borderWidth: 2,
+    borderColor: "#222",
+    backgroundColor: "#eee"
+  },
+  cell: {
+    borderWidth: 0.5,
+    borderColor: "#777",
+    width: CELL_LENGTH,
+    height: CELL_LENGTH,
+    alignItems: "center",
+    justifyContent: "center",
   }
 });

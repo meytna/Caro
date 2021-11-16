@@ -10,26 +10,25 @@ import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { NativeRouter, Switch, Route } from 'react-router-native';
 
-import GetStarted from "./screens/GetStarted";
-import MainMenu from './screens/MainMenu';
-import SelectTypeGame from './screens/SelectTypeGame';
-import Game from './screens/Game';
-import Settings from './screens/Settings';
-import Board from './screens/Board';
+import GetStartedScreen from "./screens/GetStartedScreen";
+import MainMenuScreen from './screens/MainMenuScreen';
+import SelectTypeGameScreen from './screens/SelectTypeGameScreen';
+import GameScreen from './screens/GameScreen';
+import SettingsSCreen from './screens/SettingsScreen';
+
+import { CELL_LENGTH } from './config/const';
 
 const App = () => {
+  console.log("cell_length", CELL_LENGTH)
   return (
     <SafeAreaView>
-      {/* <Text>aaaa</Text> */}
       <NativeRouter>
         <Switch>
-          <Route exact path="/" component={GetStarted} />
-          <Route exact path="/menu" component={MainMenu} />
-          <Route exact path="/select-type" component={SelectTypeGame} />
-          <Route exact path="/game" component={Game} />
-          <Route exact path="/settings" component={Settings} />
-          <Route exact path="/board" component={Board} />
-          {/* <Route exact path="/" component={<View />} /> */}
+          <Route exact path="/" component={GetStartedScreen} />
+          <Route exact path="/menu" component={MainMenuScreen} />
+          <Route exact path="/select-type" component={SelectTypeGameScreen} />
+          <Route exact path="/game" component={GameScreen} />
+          <Route exact path="/settings" component={SettingsSCreen} />
         </Switch>
       </NativeRouter>
     </SafeAreaView>

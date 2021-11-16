@@ -16,11 +16,30 @@ const resources = {
   }
 }
 
+// const getLng = () => AsyncStorage.getItem("Storage_lng").then((lng) => lng)
+
+// let lng = await AsyncStorage.getItem("Storage_lng");
+// if (!lng) {
+//   lng = "vi"
+// }
+// return lng
+
+
+
 const i18n = async () => {
   let lng = await AsyncStorage.getItem("Storage_lng");
   if (!lng) {
     lng = "vi"
   }
+  // AsyncStorage.getItem("Storage_lng").then(lng => i18next
+  //   .use(initReactI18next)
+  //   .init({
+  //     resources,
+  //     lng: 'vi',
+  //     interpolation: {
+  //       escapeValue: false,
+  //     }
+  //   }))
 
   return i18next
     .use(initReactI18next)

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { BackHandler, Text, View } from "react-native";
+import { BackHandler, Button, Text, View } from "react-native";
 import { styles } from "../style/styles";
 
-const Board = (props) => {
+const SettingsSCreen = (props) => {
   const { history } = props;
 
   const backAction = () => {
@@ -15,8 +15,9 @@ const Board = (props) => {
     return () => BackHandler.removeEventListener("hardwareBackPress", backAction);
   }, [])
   return <View style={styles.mainBackground}>
-    <Text>Board</Text>
+    <Text>Settings</Text>
+    {/* <Button title="play" onPress={() => history.push("/select-type")} /> */}
   </View>
 }
 
-export default Board;
+export default SettingsSCreen;
