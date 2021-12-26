@@ -16,10 +16,7 @@ import SelectTypeGameScreen from './screens/SelectTypeGameScreen';
 import GameScreen from './screens/GameScreen';
 import SettingsSCreen from './screens/SettingsScreen';
 
-import { CELL_LENGTH } from './config/const';
-
 const App = () => {
-  console.log("cell_length", CELL_LENGTH)
   return (
     <SafeAreaView>
       <NativeRouter>

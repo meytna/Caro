@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
-import { Text, View, Pressable, TouchableHighlight, TouchableOpacity } from "react-native";
+import React from "react";
+import { Text, View, TouchableOpacity } from "react-native";
 import { styles } from "../style/styles";
 import { withTranslation } from "react-i18next";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-
 
 const MainMenuScreen = (props) => {
   const { history, t } = props;
@@ -15,21 +13,21 @@ const MainMenuScreen = (props) => {
       style={styles.button}
       activeOpacity={0.8}
     >
-      <Text style={styles.buttonTitle}>{t("play")}</Text>
+      <Text style={styles.buttonTitle}>{t("MainMenu.Play")}</Text>
     </TouchableOpacity>
     <TouchableOpacity
       onPress={() => null}
       style={styles.button}
       activeOpacity={0.8}
     >
-      <Text style={styles.buttonTitle}>Credit</Text>
+      <Text style={styles.buttonTitle}>{t("MainMenu.About")}</Text>
     </TouchableOpacity>
     <TouchableOpacity
       onPress={() => history.push("/settings")}
       style={styles.button}
       activeOpacity={0.8}
     >
-      <Text style={styles.buttonTitle}>Settings</Text>
+      <Text style={styles.buttonTitle}>{t("MainMenu.Settings")}</Text>
     </TouchableOpacity>
   </View>
 }

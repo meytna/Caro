@@ -16,39 +16,32 @@ const resources = {
   }
 }
 
-// const getLng = () => AsyncStorage.getItem("Storage_lng").then((lng) => lng)
-
-// let lng = await AsyncStorage.getItem("Storage_lng");
-// if (!lng) {
-//   lng = "vi"
-// }
-// return lng
-
-
+const languageDetector = {
+  init: Function.prototype,
+  type: "languageDetector",
+  async: true,
+  detect: async (callback) => {
+    const lng = await AsyncStorage.getItem("Storage_lng");
+    callback(lng);
+  },
+  cacheUserLanguage: () => { },
+}
 
 const i18n = async () => {
   let lng = await AsyncStorage.getItem("Storage_lng");
   if (!lng) {
     lng = "vi"
   }
-  // AsyncStorage.getItem("Storage_lng").then(lng => i18next
-  //   .use(initReactI18next)
-  //   .init({
-  //     resources,
-  //     lng: 'vi',
-  //     interpolation: {
-  //       escapeValue: false,
-  //     }
-  //   }))
 
   return i18next
+    // .use(languageDetector)
     .use(initReactI18next)
     .init({
       resources,
       lng: lng,
       interpolation: {
         escapeValue: false,
-      }
+      },
     });
 }
 

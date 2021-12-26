@@ -1,0 +1,68 @@
+{
+  "test": "test",
+  "Common": {
+    "Back": "Back",
+    "Ok": "OK"
+  },
+  "GetStarted" : {
+    "TapToPlay" : "Tap To Play"
+  },
+  "MainMenu": {
+    "Play": "Play",
+    "About": "About"
+  },
+  "SelectTypeGame": {
+    "VsPlayer": "Vs Player",
+    "VsComputer": "Vs Computer"
+  },
+  "Settings": {
+    "Language": {
+      "title": "Language",
+      "value": {
+        "Vietnamese": "Vietnamese",
+        "English": "English"
+      }
+    },
+    "Law": {
+      "title": "Law",
+      "value": {
+        "Standard": "Standard",
+        "Free-style": "Free Style"
+      }
+    }
+  }
+}
+{
+  "Test":"thử 2",
+  "Common": {
+    "Back": "Quay lại",
+    "Ok": "OK"
+  },
+  "GetStarted" : {
+    "TapToPlay" : "Chạm để chơi"
+  },
+  "MainMenu": {
+    "Play": "Chơi",
+    "About": "Về"
+  },
+  "SelectTypeGame": {
+    "VsPlayer": "Chơi với người",
+    "VsComputer": "Chơi với máy"
+  },
+  "Settings": {
+    "Language": {
+      "title": "Ngôn ngữ:",
+      "value": {
+        "Vietnamese": "Tiếng Việt",
+        "English": "Tiếng Anh"
+      }
+    },
+    "Law": {
+      "title": "Luật chơi",
+      "value": {
+        "Standard": "Tiêu chuẩn",
+        "Free-style": "Tự do"
+      }
+    }
+  }
+}

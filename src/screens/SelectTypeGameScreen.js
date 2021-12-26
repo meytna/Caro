@@ -1,9 +1,20 @@
-import React, { useEffect } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import React, { useEffect, useState } from "react";
+import { withTranslation } from "react-i18next";
 import { BackHandler, Text, View, TouchableOpacity } from "react-native";
 import { styles } from "../style/styles";
 
 const SelectTypeGameScreen = (props) => {
-  const { history } = props;
+  const { history, t } = props;
+  const [law, setLaw] = useState(1);
+
+  const loadLaw = async () => {
+    const law = await AsyncStorage.getItem("Storage_law") === "fs" ? 1 : 2;
+    setLaw(law)
+  }
+  useEffect(() => {
+    loadLaw();
+  }, [])
 
   const backAction = () => {
     history.goBack();
@@ -17,27 +28,27 @@ const SelectTypeGameScreen = (props) => {
 
   return <View style={styles.mainBackground}>
     <TouchableOpacity
-      onPress={() => history.push("/game")}
+      onPress={() => history.push("/game", { type: 2, law: law })}
       style={styles.button}
       activeOpacity={0.8}
     >
-      <Text style={styles.buttonTitle}>PvC</Text>
+      <Text style={styles.buttonTitle}>{t("SelectTypeGame.VsComputer")}</Text>
     </TouchableOpacity>
     <TouchableOpacity
-      onPress={() => history.push("/game")}
+      onPress={() => history.push("/game", { type: 1, law: law })}
       style={styles.button}
       activeOpacity={0.8}
     >
-      <Text style={styles.buttonTitle}>PvP</Text>
+      <Text style={styles.buttonTitle}>{t("SelectTypeGame.VsPlayer")}</Text>
     </TouchableOpacity>
     <TouchableOpacity
       onPress={() => history.goBack()}
       style={styles.button}
       activeOpacity={0.8}
     >
-      <Text style={styles.buttonTitle}>Back</Text>
+      <Text style={styles.buttonTitle}>{t("Common.Back")}</Text>
     </TouchableOpacity>
   </View>
 }
 
-export default SelectTypeGameScreen;
+export default withTranslation()(SelectTypeGameScreen);

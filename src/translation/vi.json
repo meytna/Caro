@@ -1,3 +1,41 @@
 {
-  "play": "Chơi"
+  "Test":"thử 2",
+  "Common": {
+    "Back": "Quay lại",
+    "Ok": "OK",
+    "Cancel": "Huỷ"
+  },
+  "GetStarted" : {
+    "TapToPlay" : "Chạm để chơi"
+  },
+  "MainMenu": {
+    "Play": "Chơi",
+    "About": "Về Chúng Tôi",
+    "Settings": "Cài đặt"
+  },
+  "SelectTypeGame": {
+    "VsPlayer": "Chơi với người",
+    "VsComputer": "Chơi với máy"
+  },
+  "Settings": {
+    "Language": {
+      "title": "Ngôn ngữ",
+      "value": {
+        "Vietnamese": "Tiếng Việt",
+        "English": "Tiếng Anh"
+      }
+    },
+    "Law": {
+      "title": "Luật chơi",
+      "value": {
+        "Standard": "Tiêu chuẩn",
+        "Free-style": "Tự do"
+      }
+    }
+  },
+  "Game": {
+    "Player1Name": "Tên người chơi 1",
+    "Player2Name": "Tên người chơi 2",
+    "PlayerStart": "Người chơi bắt đầu"
+  }
 }

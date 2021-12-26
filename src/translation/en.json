@@ -1,3 +1,40 @@
 {
-  "play": "Playen"
+  "Common": {
+    "Back": "Back",
+    "Ok": "OK",
+    "Cancel": "Cancel"
+  },
+  "GetStarted" : {
+    "TapToPlay" : "Tap To Play"
+  },
+  "MainMenu": {
+    "Play": "Play",
+    "About": "About Me",
+    "Settings": "Settings"
+  },
+  "SelectTypeGame": {
+    "VsPlayer": "Vs Player",
+    "VsComputer": "Vs Computer"
+  },
+  "Settings": {
+    "Language": {
+      "title": "Language",
+      "value": {
+        "Vietnamese": "Vietnamese",
+        "English": "English"
+      }
+    },
+    "Law": {
+      "title": "Law",
+      "value": {
+        "Standard": "Standard",
+        "Free-style": "Free Style"
+      }
+    }
+  },
+  "Game": {
+    "Player1Name": "Player 1's name",
+    "Player2Name": "Player 2's name",
+    "PlayerStart": "Player start"
+  }
 }
